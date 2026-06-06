@@ -1,0 +1,37 @@
+#!/bin/bash
+# omablue-bluetooth-tui — Bluetooth TUI Manager for OddOs
+# 
+# Status: Scaffolding complete, binary placeholder
+# 
+# To compile locally on a machine with Rust:
+#   git clone https://github.com/odd-git/omablue-bluetooth-tui.git
+#   cd omablue-bluetooth-tui
+#   cargo build --release
+#   # Binary will be at: target/release/omablue-bluetooth-tui
+#
+# Then replace this file with the compiled binary.
+
+set -euo pipefail
+
+SCAFFOLD_DIR="/tmp/omablue-bluetooth-tui"
+
+if [[ -d "$SCAFFOLD_DIR" ]]; then
+    echo "📋 omablue-bluetooth-tui scaffolding found at: $SCAFFOLD_DIR"
+    echo "📝 To compile, run:"
+    echo ""
+    echo "   cd $SCAFFOLD_DIR"
+    echo "   cargo build --release"
+    echo ""
+    echo "   # Then copy the binary:"
+    echo "   cp target/release/omablue-bluetooth-tui ~/.local/share/omablue/bin/"
+    echo ""
+else
+    echo "❌ Scaffold not found. Extract it first:"
+    echo ""
+    echo "   cd /tmp"
+    echo "   tar -xzf omablue-bluetooth-tui-scaffold.tar.gz"
+    echo ""
+    echo "📚 Documentation: cat /tmp/README_CONSEGNA.md"
+fi
+
+exit 1
