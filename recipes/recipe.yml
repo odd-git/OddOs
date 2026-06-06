@@ -23,7 +23,6 @@ modules:
         - ardour9
         - kdenlive
         - steam
-        - starship
 
   - type: default-flatpaks
     configurations:
@@ -31,5 +30,13 @@ modules:
         scope: system
         install:
           - org.gnome.Loupe
+          - org.musescore.MuseScore
+          - org.localsend.localsend_app
+          - org.jjazzlab.JJazzLab
+          - org.gnome.Boxes.Extension.OsinfoDb
+          - md.obsidian.Obsidian
+          - io.ente.auth
+          - com.obsproject.Studio
+          - io.ente.photos
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
