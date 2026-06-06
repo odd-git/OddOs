@@ -21,7 +21,7 @@ modules:
     install:
       packages:
         - ardour9
-        - kdnlive
+        - kdenlive
         - steam
         - starship
 
