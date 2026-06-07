@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 dnf -y install dnf-plugins-core --setopt=install_weak_deps=False
 
@@ -51,8 +52,9 @@ systemctl enable scx_loader.service
 VER=$(basename /usr/lib/modules/*)
 akmods --force --kernels $VER --kmod zenergy
 
-# ostree requires vmlinuz at /usr/lib/modules/<kver>/vmlinuz
-cp /boot/vmlinuz-$VER /usr/lib/modules/$VER/vmlinuz
+# kernel-cachyos-lto-core installs vmlinuz directly to /lib/modules/<kver>/vmlinuz
+# which is exactly where ostree expects it — no copy needed
+[ -f /usr/lib/modules/$VER/vmlinuz ] || { echo "ERROR: vmlinuz missing at /usr/lib/modules/$VER/vmlinuz"; exit 1; }
 
 export DRACUT_NO_XATTR=1
 dracut --kver $VER --force --add ostree --no-hostonly --reproducible /usr/lib/modules/$VER/initramfs.img
