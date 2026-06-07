@@ -28,6 +28,13 @@ modules:
         - fastfetch
         - yazi
 
+  - type: kargs
+    append:
+      - mitigations=off
+      - threadirqs
+      - preempt=full
+      - quiet
+
   - type: default-flatpaks
     configurations:
       - notify: true
