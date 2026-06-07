@@ -26,7 +26,6 @@ modules:
         - kdenlive
         - steam
         - fastfetch
-        - yazi
 
   - type: kargs
     append:
