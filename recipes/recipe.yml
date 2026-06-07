@@ -28,7 +28,6 @@ modules:
       packages:
         - ardour9
         - kdenlive
-        - steam
 
   - type: default-flatpaks
     configurations:
