@@ -14,7 +14,12 @@ image-version: latest # latest is also supported if you want new updates ASAP
 modules:
   - type: script
     scripts:
-      - install-cachyos-kernel.sh
+      - kernels/kernel-cachy.sh
+
+  - type: systemd
+    system:
+      enabled:
+        - scx_loader.service
 
   - type: files
     files:
