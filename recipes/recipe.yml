@@ -6,7 +6,7 @@ name: oddos
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/secureblue/cosmic-main-hardened
+base-image: quay.io/rakuos/rakuos-cosmic
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -20,10 +20,15 @@ modules:
         destination: /usr
 
   - type: dnf
+    repos:
+      files:
+        - https://repo.secureblue.dev/secureblue.repo
     install:
       packages:
         - ardour9
         - kdenlive
+        - trivalent
+        - steam
 
   - type: default-flatpaks
     configurations:
