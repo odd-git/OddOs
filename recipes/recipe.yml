@@ -38,7 +38,6 @@ modules:
         - kdenlive
         - steam
         - fastfetch
-        - yazi
 
   - type: default-flatpaks
     configurations:
