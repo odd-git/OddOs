@@ -20,8 +20,16 @@ modules:
         destination: /usr
 
   - type: dnf
+    remove:
+      packages:
+        - kernel
+        - kernel-core
+        - kernel-modules
     install:
       packages:
+        - kernel-cachyos
+        - kernel-cachyos-core
+        - kernel-cachyos-modules
         - ardour9
         - kdenlive
         - steam
