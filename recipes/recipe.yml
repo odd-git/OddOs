@@ -12,10 +12,6 @@ image-version: latest # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: script
-    scripts:
-      - enable-cachyos-copr.sh
-
   - type: files
     files:
       - source: system/etc
@@ -24,20 +20,13 @@ modules:
         destination: /usr
 
   - type: dnf
-    remove:
-      packages:
-        - kernel
-        - kernel-core
-        - kernel-modules
     install:
       packages:
-        - kernel-cachyos
-        - kernel-cachyos-core
-        - kernel-cachyos-modules
         - ardour9
         - kdenlive
         - steam
         - fastfetch
+        - yazi
 
   - type: default-flatpaks
     configurations:
