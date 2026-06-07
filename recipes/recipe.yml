@@ -28,7 +28,7 @@ modules:
         - fastfetch
 
   - type: kargs
-    append:
+    kargs:
       - mitigations=off
       - threadirqs
       - preempt=full
