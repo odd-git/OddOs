@@ -45,6 +45,7 @@ dnf -y install \
     scx-tools \
     scx-manager
 dnf -y swap zram-generator-defaults cachyos-settings
+systemctl enable scx_loader.service
 
 # Manually build modules, run depmod & generate initramfs
 VER=$(basename /usr/lib/modules/*)

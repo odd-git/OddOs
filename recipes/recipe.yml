@@ -16,11 +16,6 @@ modules:
     scripts:
       - kernels/kernel-cachy.sh
 
-  - type: systemd
-    system:
-      enabled:
-        - scx_loader.service
-
   - type: files
     files:
       - source: system/etc
