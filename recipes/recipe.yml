@@ -29,20 +29,32 @@ modules:
         - kdenlive
         - trivalent
         - steam
+        - neovim
+        - gum
 
   - type: default-flatpaks
     configurations:
       - notify: true
         scope: system
         install:
-          - org.gnome.Loupe
+          # Audio / Music
           - org.musescore.MuseScore
-          - org.localsend.localsend_app
           - org.jjazzlab.JJazzLab
-          - org.gnome.Boxes.Extension.OsinfoDb
-          - md.obsidian.Obsidian
-          - io.ente.auth
+          - org.rncbc.qpwgraph
+          - com.github.wwmm.easyeffects
+          # Media
+          - org.gnome.Loupe
           - com.obsproject.Studio
           - io.ente.photos
-
+          # Productivity
+          - md.obsidian.Obsidian
+          - com.calibre_ebook.calibre
+          # Communication
+          - org.signal.Signal
+          # Security / Auth
+          - io.ente.auth
+          # System / Utilities
+          - org.gnome.Boxes.Extension.OsinfoDb
+          - com.github.tchx84.Flatseal
+          - org.localsend.localsend_app
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
