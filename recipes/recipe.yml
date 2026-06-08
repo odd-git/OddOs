@@ -23,7 +23,6 @@ modules:
     repos:
       files:
         - https://repo.secureblue.dev/secureblue.repo
-      urls:
         - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       packages:
