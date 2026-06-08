@@ -23,6 +23,8 @@ modules:
     repos:
       files:
         - https://repo.secureblue.dev/secureblue.repo
+      urls:
+        - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       packages:
         - ardour9
@@ -31,6 +33,14 @@ modules:
         - steam
         - neovim
         - gum
+        - tailscale
+
+  - type: script
+    snippets:
+      - |
+        curl -fsSL https://opencode.ai/install | bash
+      - |
+        curl -fsSL https://claude.ai/install.sh | bash
 
   - type: default-flatpaks
     configurations:
